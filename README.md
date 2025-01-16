@@ -20,7 +20,7 @@ Este repositorio contiene el código fuente de una API REST desarrollada en Java
 ## Descarga y configuración
 Para descargar este repositorio, puedes clonarlo desde la terminal utilizando el siguiente comando:
 ```bash
-git clone https://github.com/ammoraleso/smart-job.git
+git clone https://github.com/ammoraleso/ApplicationCorpTest.git
 ```
 Una vez que tengas el repositorio en tu máquina local, puedes importarlo en tu IDE de preferencia (por ejemplo, IntelliJ IDEA o Eclipse) como un proyecto Maven.
 
@@ -48,7 +48,7 @@ All the methods for UserServices class (CRUD) are covered with testing pass.
 
 ## Diagrama de arquitectura
 A continuación se muestra un diagrama de la arquitectura de la aplicación:
-![Arquitectura-TuHome-Backend](src/main/resources/Arquitectura/Arquitectura-TuHome-Backend.png)
+![Arquitectura](src/main/resources/Arquitectura/Arquitectura.png)
 
 La aplicación sigue el patrón MVC (Modelo-Vista-Controlador), donde los Controllers se encargan de recibir las peticiones HTTP, los Services contienen la lógica de negocio y se comunican con los Repositories, y los Repositories interactúan con la base de datos.
 
