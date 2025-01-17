@@ -70,7 +70,7 @@ You can use the collection to validate and create more students, assign to cours
 
 ## SQL Answers
 
-You can check for all the response for all the questions related with sql in the following route: /resources/SQL_Excercises/questions-solved.sql
+You can check for all the response for all the questions related with sql in the following route: scr/main/resources/SQL_Excercises/questions-solved.sql
 ## Useful Documentation
 
 - [Spring Boot Official Documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
