@@ -20,4 +20,7 @@ public class Library {
     @OneToMany(mappedBy = "library", cascade = CascadeType.ALL, orphanRemoval = true)
     @ToString.Exclude
     private List<Book> books;
+
+    @ManyToMany(mappedBy = "libraries")
+    private List<Member> members;
 }
