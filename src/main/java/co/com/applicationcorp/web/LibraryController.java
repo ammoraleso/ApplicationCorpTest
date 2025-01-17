@@ -21,7 +21,7 @@ public class LibraryController {
         this.libraryService = libraryService;
     }
 
-    @GetMapping("/")
+    @GetMapping("")
     public List<LibraryDTO> getAvailableBooks(@RequestParam(defaultValue = "0") int page,
                                               @RequestParam(defaultValue = "10") int size) {
         return libraryService.getAll(page, size);

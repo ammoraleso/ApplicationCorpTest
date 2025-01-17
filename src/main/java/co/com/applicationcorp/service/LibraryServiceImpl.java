@@ -20,7 +20,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-@Data
 public class LibraryServiceImpl implements LibraryService {
 
     @Autowired
@@ -77,6 +76,7 @@ public class LibraryServiceImpl implements LibraryService {
     }
 
     @Override
+    @Transactional
     public BookDTO returnBook(Long bookId) {
         Book book = bookRepository.findById(bookId)
                 .orElseThrow(() -> new RuntimeException("Book not found"));
@@ -88,6 +88,7 @@ public class LibraryServiceImpl implements LibraryService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public List<LibraryDTO> getAll(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
         Page<Library> pageResult = libraryRepository.findAll(pageable);
@@ -96,6 +97,7 @@ public class LibraryServiceImpl implements LibraryService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public List<MemberDTO> getAllMembersByLibrary(Long libraryId, int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
         Page<Member> pageResult = memberRepository.findByLibrariesId(libraryId, pageable); // Nuevo método
