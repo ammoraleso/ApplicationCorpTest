@@ -100,7 +100,7 @@ public class LibraryServiceImpl implements LibraryService {
     @Transactional(readOnly = true)
     public List<MemberDTO> getAllMembersByLibrary(Long libraryId, int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
-        Page<Member> pageResult = memberRepository.findByLibrariesId(libraryId, pageable); // Nuevo método
+        Page<Member> pageResult = memberRepository.findByLibrariesId(libraryId, pageable);
         List<Member> members = pageResult.getContent();
 
         return members.stream()
